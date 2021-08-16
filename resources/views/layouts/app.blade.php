@@ -14,6 +14,7 @@
           rel="stylesheet">
 
     <link id="change-link" rel="stylesheet" type="text/css" href="{{ asset('css/style-1.css') }}">
+    <link rel="stylesheet" href=" {{ asset('vendor/fontawesome/css/all.min.css') }}">
 </head>
 <body>
 
