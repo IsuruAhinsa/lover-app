@@ -80,7 +80,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="sub-footer">
-                    <p>Lovers © 2021. All rights reserved</p>
+                    <p>
+                        Lovers © 2021. All rights reserved
+                        -
+                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    </p>
                 </div>
             </div>
         </div>
