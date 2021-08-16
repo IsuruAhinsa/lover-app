@@ -21,23 +21,30 @@
                                 <a class="nav-link" href="javascript:void(0)">back</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="{{ url('/') }}">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">features</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">testimonial</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">download</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="#">contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center btn btn-white" href="#"><i
-                                        class="me-2 iw-18 ih-18" data-feather="log-in"></i>login</a>
+                                @if (Route::has('register'))
+                                    <a class="nav-link d-flex align-items-center btn btn-dark" href="{{ route('register') }}">
+                                        <i class="me-2 iw-18 ih-18" data-feather="user-plus"></i>
+                                        register
+                                    </a>
+                                @endif
+                            </li>
+
+                            <li class="nav-item">
+                                @if (Route::has('login'))
+                                    <a class="nav-link d-flex align-items-center btn btn-white" href="{{ route('login') }}">
+                                        <i class="me-2 iw-18 ih-18" data-feather="log-in"></i>
+                                        login
+                                    </a>
+                                @endif
                             </li>
 
                         </ul>
