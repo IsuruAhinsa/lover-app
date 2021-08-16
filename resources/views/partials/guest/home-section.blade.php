@@ -25,7 +25,9 @@
                             <h1>easy to talk with <span>lovers</span></h1>
                             <p>Lovers is an online platform that allows users to create a public profile and
                                 interact with friends, family, colleagues, customers, or clients.</p>
-                            <a href="#" class="btn btn-solid btn-lg">get started</a>
+                            @if (Route::has('login'))
+                                <a href="{{ route('login') }}" class="btn btn-solid btn-lg">get started</a>
+                            @endif
                         </div>
                     </div>
                 </div>

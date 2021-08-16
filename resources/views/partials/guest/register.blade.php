@@ -38,7 +38,9 @@
                                 Your Data is Secure with us.
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-solid btn-md">register now</a>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="btn btn-solid btn-md">register now</a>
+                        @endif
                     </div>
                 </div>
             </div>
