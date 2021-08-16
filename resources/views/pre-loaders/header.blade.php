@@ -402,7 +402,7 @@
                                data-feather="user"></i>
                             <div class="media d-none d-sm-flex">
                                 <div class="user-img">
-                                    <img src="{{ asset('images/user-sm/1.jpg') }}"
+                                    <img src="{{ Auth::user()->image ?? asset('images/user-sm/1.jpg') }}"
                                          class="img-fluid blur-up lazyload bg-img" alt="user">
                                     <span class="available-stats online"></span>
                                 </div>
