@@ -1,5 +1,5 @@
 <div class="tap-top">
     <div>
-        <i class="fas fa-angle-double-up"></i>
+        <i data-feather="arrow-up"></i>
     </div>
 </div>
