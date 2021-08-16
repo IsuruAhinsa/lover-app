@@ -22,12 +22,12 @@
                                 <h6>best UI Design</h6>
                             </div>
                             <div class="img">
-                                <img src="{{ asset('assets/images/user-sm/1.jpg') }}" class="img-fluid blur-up lazyload" alt="">
+                                <img src="{{ asset('images/user-sm/1.jpg') }}" class="img-fluid blur-up lazyload" alt="">
                             </div>
                         </div>
                         <div class="user-box user2 wow zoomIn" data-wow-delay="0.15s">
                             <div class="img">
-                                <img src="{{ asset('assets/images/user-sm/2.jpg') }}" class="img-fluid blur-up lazyload" alt="">
+                                <img src="{{ asset('images/user-sm/2.jpg') }}" class="img-fluid blur-up lazyload" alt="">
                             </div>
                             <div class="content bottom">
                                 <h6>cool app</h6>
@@ -35,7 +35,7 @@
                         </div>
                         <div class="user-box user3 wow zoomIn" data-wow-delay="0.20s">
                             <div class="img">
-                                <img src="{{ asset('assets/images/user-sm/3.jpg') }}" class="img-fluid blur-up lazyload" alt="">
+                                <img src="{{ asset('images/user-sm/3.jpg') }}" class="img-fluid blur-up lazyload" alt="">
                             </div>
                             <div class="content bottom">
                                 <h6>love to use</h6>
@@ -46,7 +46,7 @@
                                 <h6>best app</h6>
                             </div>
                             <div class="img">
-                                <img src="{{ asset('assets/images/user-sm/4.jpg') }}" class="img-fluid blur-up lazyload" alt="">
+                                <img src="{{ asset('images/user-sm/4.jpg') }}" class="img-fluid blur-up lazyload" alt="">
                             </div>
                         </div>
                         <div class="user-box user5 wow zoomIn" data-wow-delay="0.30s">
@@ -54,7 +54,7 @@
                                 <h6>best app</h6>
                             </div>
                             <div class="img">
-                                <img src="{{ asset('assets/images/user-sm/5.jpg') }}" class="img-flui" alt="">
+                                <img src="{{ asset('images/user-sm/5.jpg') }}" class="img-flui" alt="">
                             </div>
                         </div>
                     </div>
