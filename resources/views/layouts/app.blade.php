@@ -18,11 +18,13 @@
 </head>
 <body>
 
-@section('pre-loader') @show
+    <div class="pre-loader">
+        @section('pre-loader') @show
+    </div>
 
-@include('partials.header')
+    @include('partials.header')
 
-@yield('content')
+    @yield('content')
 
 <!-- latest jquery-->
 <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
