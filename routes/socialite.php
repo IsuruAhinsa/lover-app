@@ -1,7 +1,6 @@
 <?php
 
-use App\Models\User;
-use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\SocialiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -9,24 +8,5 @@ use Laravel\Socialite\Facades\Socialite;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/auth/google/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
-
-Route::get('/auth/google/callback', function () {
-    $googleUser = Socialite::driver('google')->stateless()->user();
-
-    $user =  User::where(['email' => $googleUser->getEmail()])->first();
-
-    if (!$user) {
-        $user = User::create([
-            'name' => $googleUser->getName(),
-            'email' => $googleUser->getEmail(),
-            'image' => $googleUser->getAvatar(),
-            'provider' => 'google',
-            'provider_id' => $googleUser->getId(),
-        ]);
-    }
-    Auth::login($user);
-    return redirect()->route('home');
-});
+Route::get('/auth/{provider}/redirect', [SocialiteController::class, 'redirectToProvider'])->name('social.redirect');
+Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProviderCallback'])->name('social.callback');
