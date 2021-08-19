@@ -23,4 +23,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('home');
     })->name('home');
 
+    Route::view('user/profile/edit', 'profile.edit')->name('profile.edit');
+
 });
