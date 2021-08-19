@@ -1,19 +1,23 @@
 <div class="profile-cover">
+
     <img src="{{ asset('images/cover/1.jpg') }}" class="img-fluid blur-up lazyload bg-img" alt="cover">
+
     <div class="profile-box d-lg-block d-none">
         <div class="profile-content">
+
             <div class="image-section">
                 <div class="profile-img">
                     <div>
-                        <img src="{{ asset('images/user-sm/15.jpg') }}" class="img-fluid blur-up lazyload bg-img"
+                        <img src="{{ Auth::user()->profile_photo_url }}" class="img-fluid blur-up lazyload bg-img"
                              alt="profile">
                     </div>
-                    <span class="stats">
-                                    <img src="{{ asset('images/icon/verified.png') }}" class="img-fluid blur-up lazyload"
-                                         alt="verified">
-                                </span>
+                    {{--<span class="stats">
+                        <img src="{{ asset('images/icon/verified.png') }}" class="img-fluid blur-up lazyload"
+                             alt="verified">
+                    </span>--}}
                 </div>
             </div>
+
             <div class="profile-detail">
                 <h2>kelin jasen <span>❤</span></h2>
                 <h5>kelin.jasen156@gmail.com</h5>
@@ -33,11 +37,42 @@
                         </li>
                     </ul>
                 </div>
-                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#editProfile"
-                   class="btn btn-solid">edit profile</a>
+
+                @if(request()->routeIs('profile.edit'))
+
+                    <div x-data="{photoName: null, photoPreview: null}">
+
+                        <input
+                            type="file"
+                            class="d-none"
+                            wire:model="photo"
+                            x-ref="photo"
+                            x-on:change="
+                                            photoName = $refs.photo.files[0].name;
+                                            const reader = new FileReader();
+                                            reader.onload = (e) => {
+                                                photoPreview = e.target.result;
+                                            };
+                                            reader.readAsDataURL($refs.photo.files[0]);
+                                        "
+                        />
+
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#editProfile"
+                           class="btn btn-solid">change profile photo</a>
+
+                    </div>
+
+                @else
+
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#editProfile"
+                       class="btn btn-solid">edit profile</a>
+
+                @endif
+
             </div>
         </div>
     </div>
+
     <div class="setting-dropdown btn-group custom-dropdown arrow-none dropdown-sm">
         <a class="btn-white btn-cover" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
            aria-expanded="false">
@@ -67,6 +102,7 @@
         </div>
     </div>
 </div>
+
 <div class="d-lg-none d-block">
     <div class="profile-box">
         <div class="profile-content">
@@ -101,8 +137,19 @@
                         </li>
                     </ul>
                 </div>
-                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#editProfile"
-                   class="btn btn-solid">edit profile</a>
+
+                @if(request()->routeIs('profile.edit'))
+
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#editProfile"
+                       class="btn btn-solid">change profile photo</a>
+
+                @else
+
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#editProfile"
+                       class="btn btn-solid">edit profile</a>
+
+                @endif
+
             </div>
         </div>
     </div>

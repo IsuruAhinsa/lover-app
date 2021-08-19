@@ -9,7 +9,7 @@
             @if(!Laravel\Fortify\Features::updateProfileInformation())
 
             <div class="user-img">
-                <img src="{{ Auth::user()->image ?? asset('images/user-sm/1.jpg') }}" class="img-fluid blur-up lazyloaded bg-img" alt="user">
+                <img src="{{ Auth::user()->profile_photo_url }}" class="img-fluid blur-up lazyloaded bg-img" alt="user">
                 <span class="available-stats online"></span>
             </div>
 
@@ -27,7 +27,7 @@
                 >
 
                 <img
-                    src="{{ Auth::user()->image ?? asset('images/user-sm/1.jpg') }}"
+                    src="{{ Auth::user()->profile_photo_url }}"
                     class="img-fluid blur-up lazyload bg-img"
                     alt="user"
                     style="display: none;"

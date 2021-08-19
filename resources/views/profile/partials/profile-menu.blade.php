@@ -27,7 +27,7 @@
         <li class="d-xl-none d-inline-block">
             <a href="#">
                 <i class="iw-14 ih-14" data-feather="list"></i>
-                <h6>acitivity feed</h6>
+                <h6>activity feed</h6>
             </a>
         </li>
     </ul>
@@ -41,7 +41,7 @@
         <li class="active">
             <a href="#">
                 <i class="iw-14 ih-14" data-feather="list"></i>
-                <h6>acitivity feed</h6>
+                <h6>activity feed</h6>
             </a>
         </li>
     </ul>
