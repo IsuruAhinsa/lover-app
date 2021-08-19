@@ -1,10 +1,14 @@
 <header>
+
     <div class="mobile-fix-menu"></div>
+
     <div class="container-fluid custom-padding">
+
         <div class="header-section">
+
             <div class="header-left">
                 <div class="brand-logo">
-                    <a href="{{ url('/home') }}">
+                    <a href="#">
                         <img src="{{ asset('images/icon/logo.png') }}" alt="logo" class="img-fluid blur-up lazyload">
                     </a>
                 </div>
@@ -14,7 +18,7 @@
                 </div>
                 <ul class="btn-group">
                     <li class="header-btn home-btn">
-                        <a class="main-link" href="index.html">
+                        <a class="main-link" href="#">
                             <i class="icon-light stroke-width-3 iw-16 ih-16" data-feather="home"></i>
                         </a>
                     </li>
@@ -34,7 +38,7 @@
                                 <ul class="friend-list">
                                     <li>
                                         <div class="media">
-                                            <img src="../assets/images/user-sm/5.jpg" alt="user">
+                                            <img src="{{ asset('images/user-sm/5.jpg') }}" alt="user">
                                             <div class="media-body">
                                                 <div>
                                                     <h5 class="mt-0">Paige Turner</h5>
@@ -49,7 +53,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img src="../assets/images/user-sm/6.jpg" alt="user">
+                                            <img src="{{ asset('images/user-sm/6.jpg') }}" alt="user">
                                             <div class="media-body">
                                                 <div>
                                                     <h5 class="mt-0">Paige Turner</h5>
@@ -64,7 +68,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img src="../assets/images/user-sm/7.jpg" alt="user">
+                                            <img src="{{ asset('images/user-sm/7.jpg') }}" alt="user">
                                             <div class="media-body">
                                                 <div>
                                                     <h5 class="mt-0">Paige Turner</h5>
@@ -79,7 +83,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img src="../assets/images/user-sm/2.jpg" alt="user">
+                                            <img src="{{ asset('images/user-sm/2.jpg') }}" alt="user">
                                             <div class="media-body">
                                                 <div>
                                                     <h5 class="mt-0">Paige Turner</h5>
@@ -98,7 +102,9 @@
                     </li>
                 </ul>
             </div>
+
             <div class="header-right">
+
                 <div class="post-stats">
                     <ul>
                         <li>
@@ -115,7 +121,9 @@
                         </li>
                     </ul>
                 </div>
+
                 <ul class="option-list">
+
                     <li class="header-btn custom-dropdown dropdown-lg btn-group message-btn">
                         <a class="main-link" href="javascript:void(0)" data-bs-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
@@ -130,7 +138,7 @@
                                 <div class="right-option">
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            <a href="messanger.html">
                                                 <i class="iw-16 ih-16" data-feather="maximize"></i>
                                             </a>
                                         </li>
@@ -159,7 +167,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="media">
-                                                <img src="../assets/images/user-sm/1.jpg" alt="user">
+                                                <img src="{{ asset('images/user-sm/1.jpg') }}" alt="user">
                                                 <div class="media-body">
                                                     <div>
                                                         <h5 class="mt-0">Paige Turner</h5>
@@ -175,7 +183,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="media">
-                                                <img src="../assets/images/user-sm/2.jpg" alt="user">
+                                                <img src="{{ asset('images/user-sm/2.jpg') }}" alt="user">
                                                 <div class="media-body">
                                                     <div>
                                                         <h5 class="mt-0">Paige Turner</h5>
@@ -188,7 +196,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="media">
-                                                <img src="../assets/images/user-sm/3.jpg" alt="user">
+                                                <img src="{{ asset('images/user-sm/3.jpg') }}" alt="user">
                                                 <div class="media-body">
                                                     <div>
                                                         <h5 class="mt-0">Bob Frapples</h5>
@@ -205,6 +213,7 @@
                             </div>
                         </div>
                     </li>
+
                     <li class="header-btn custom-dropdown">
                         <a class="main-link" href="javascript:void(0)">
                             <i class="icon-light stroke-width-3 iw-16 ih-16" data-feather="moon"></i>
@@ -213,6 +222,7 @@
                             <i class="icon-light stroke-width-3 iw-16 ih-16" data-feather="sun"></i>
                         </a>
                     </li>
+
                     <li class="header-btn custom-dropdown d-md-none d-block app-btn">
                         <a class="main-link" href="javascript:void(0)">
                             <i class="icon-light stroke-width-3 iw-16 ih-16" data-feather="grid"></i>
@@ -310,6 +320,7 @@
                             </div>
                         </div>
                     </li>
+
                     <li class="header-btn custom-dropdown dropdown-lg btn-group notification-btn">
                         <a class="main-link" href="javascript:void(0)" data-bs-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
@@ -328,7 +339,7 @@
                                     <li class="d-block">
                                         <div>
                                             <div class="media">
-                                                <img src="../assets/images/user-sm/5.jpg" alt="user">
+                                                <img src="{{ asset('images/user-sm/5.jpg') }}" alt="user">
                                                 <div class="media-body">
                                                     <div>
                                                         <h5 class="mt-0"><span>Paige Turner</span> send you a
@@ -349,7 +360,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="media">
-                                                <img src="../assets/images/user-sm/6.jpg" alt="user">
+                                                <img src="{{ asset('images/user-sm/6.jpg') }}" alt="user">
                                                 <div class="media-body">
                                                     <div>
                                                         <h5 class="mt-0"><span>Bob Frapples</span> add their
@@ -364,7 +375,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="media">
-                                                <img src="../assets/images/user-sm/7.jpg" alt="user">
+                                                <img src="{{ asset('images/user-sm/7.jpg') }}" alt="user">
                                                 <div class="media-body">
                                                     <div>
                                                         <h5 class="mt-0"><span>Josephin water</span> have
@@ -379,7 +390,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="media">
-                                                <img src="../assets/images/user-sm/2.jpg" alt="user">
+                                                <img src="{{ asset('images/user-sm/2.jpg') }}" alt="user">
                                                 <div class="media-body">
                                                     <div>
                                                         <h5 class="mt-0"><span>Petey Cruiser</span> added a new
@@ -395,6 +406,7 @@
                             </div>
                         </div>
                     </li>
+
                     <li class="header-btn custom-dropdown profile-btn btn-group">
                         <a class="main-link" href="javascript:void(0)" data-bs-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
@@ -414,7 +426,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-header">
-                                <span>{{ Auth::user()->name }}</span>
+                                <span>profile</span>
                                 <div class="mobile-close">
                                     <h5>close</h5>
                                 </div>
@@ -422,7 +434,7 @@
                             <div class="dropdown-content">
                                 <ul class="friend-list">
                                     <li>
-                                        <a href="profile.html">
+                                        <a href="#">
                                             <div class="media">
                                                 <i data-feather="user"></i>
                                                 <div class="media-body">
@@ -435,7 +447,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="settings.html">
+                                        <a href="#">
                                             <div class="media">
                                                 <i data-feather="settings"></i>
                                                 <div class="media-body">
@@ -448,7 +460,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="help-support.html">
+                                        <a href="#">
                                             <div class="media">
                                                 <i data-feather="help-circle"></i>
                                                 <div class="media-body">
@@ -461,7 +473,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="login.html">
+                                        <a href="#">
                                             <div class="media">
                                                 <i data-feather="log-out"></i>
                                                 <div class="media-body">
@@ -476,8 +488,13 @@
                             </div>
                         </div>
                     </li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </div>
+
 </header>

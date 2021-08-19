@@ -23,7 +23,7 @@
         @section('pre-loader') @show
     </div>
 
-    @include('partials.header')
+    @livewire('partials.header')
 
     @yield('content')
 
