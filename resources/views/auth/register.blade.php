@@ -1,8 +1,8 @@
-@extends('layouts.guest')
+<x-guest-layout>
 
-@section('title', 'Register')
-
-@section('guest-content')
+    <x-slot name="title">
+        Lover | Register
+    </x-slot>
 
     <section class="login-section">
         <div class="header-section">
@@ -137,12 +137,12 @@
         </div>
     </section>
 
-@endsection
+    @push('js')
+        <script src="{{ asset('js/feather.min.js') }}"></script>
 
-@push('js')
-    <script src="{{ asset('js/feather.min.js') }}"></script>
+        <script>
+            feather.replace();
+        </script>
+    @endpush
 
-    <script>
-        feather.replace();
-    </script>
-@endpush
+</x-guest-layout>

@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon"/>
 
-    <title>{{ config('app.name', 'Laravel') }} @yield('title')</title>
+    <title>{{ $title ?? config('app.name', 'Laravel') }}</title>
     {{-- AlpineJS --}}
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
     <!--Google font-->
@@ -20,13 +21,16 @@
 </head>
 <body>
 
-    <div class="pre-loader">
-        @section('pre-loader') @show
-    </div>
+    {{-- pre-loader --}}
+    @if (isset($preloader))
+        <div class="pre-loader">
+            {{ $preloader }}
+        </div>
+    @endif
 
     @livewire('partials.header')
 
-    @yield('content')
+    {{ $slot }}
 
     <!-- latest jquery-->
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>

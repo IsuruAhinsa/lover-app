@@ -1,16 +1,12 @@
-@extends('layouts.app')
+<x-app-layout>
 
-@section('pre-loader')
+    <x-slot name="preloader">
+        @include('pre-loaders.header')
 
-    @include('pre-loaders.header')
-
-    <div class="page-body container-fluid custom-padding">
-        @include('pre-loaders.sidebar')
-    </div>
-
-@endsection
-
-@section('content')
+        <div class="page-body container-fluid custom-padding">
+            @include('pre-loaders.sidebar')
+        </div>
+    </x-slot>
 
     <div class="page-body container-fluid custom-padding">
 
@@ -18,4 +14,4 @@
 
     </div>
 
-@endsection
+</x-app-layout>

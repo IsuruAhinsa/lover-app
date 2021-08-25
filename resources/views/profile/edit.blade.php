@@ -1,31 +1,27 @@
-@extends('layouts.app')
+<x-app-layout>
 
-@section('pre-loader')
+    <x-slot name="preloader">
+        @include('pre-loaders.header')
 
-    @include('pre-loaders.header')
+        <div class="page-body container-fluid custom-padding">
+            @include('pre-loaders.sidebar')
 
-    <div class="page-body container-fluid custom-padding">
-        @include('pre-loaders.sidebar')
+            <div class="page-center">
 
-        <div class="page-center">
+                @include('pre-loaders.profile-cover')
 
-            @include('pre-loaders.profile-cover')
+                @include('pre-loaders.profile-menu')
 
-            @include('pre-loaders.profile-menu')
+                <div class="container-fluid section-t-space px-0 layout-default">
 
-            <div class="container-fluid section-t-space px-0 layout-default">
+                    @include('pre-loaders.profile-information')
 
-                @include('pre-loaders.profile-information')
+                </div>
 
             </div>
 
         </div>
-
-    </div>
-
-@endsection
-
-@section('content')
+    </x-slot>
 
     <div class="page-body container-fluid custom-padding profile-page">
 
@@ -61,4 +57,4 @@
 
     </div>
 
-@endsection
+</x-app-layout>
